@@ -1,0 +1,133 @@
+.resume {
+  padding: 3rem 0 4.5rem;
+  max-width: 760px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__name {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    margin: 0.3em 0 0.15em;
+  }
+
+  &__title {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    margin: 0;
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1.25rem 0;
+
+    a {
+      color: var(--ink-soft);
+      text-decoration: underline;
+    }
+  }
+
+  &__block {
+    padding: 2rem 0;
+
+    &-title {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 1.1rem;
+    }
+  }
+
+  &__summary {
+    font-size: 1.05rem;
+    max-width: 62ch;
+  }
+
+  &__item {
+    margin-bottom: 1.75rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0.6rem 0 0;
+      padding-left: 1.2rem;
+
+      li {
+        margin-bottom: 0.4rem;
+        color: var(--ink-soft);
+      }
+    }
+  }
+
+  &__item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    h3 {
+      font-size: 1.15rem;
+      margin: 0;
+    }
+  }
+
+  &__org {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+
+  &__period {
+    white-space: nowrap;
+  }
+
+  &__skills {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  &__skill-group {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__skill-label {
+    flex: 0 0 130px;
+  }
+
+  &__skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tag {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    border: 1px solid var(--line);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+}

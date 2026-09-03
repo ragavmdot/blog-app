@@ -1,0 +1,32 @@
+<section class="hero container">
+  <span class="eyebrow">A journal of small, specific decisions</span>
+  <h1 class="hero__title">Fieldnotes</h1>
+  <p class="hero__lede">
+    Entries logged as they happen: the naming choice that mattered, the bug that
+    was actually a reading problem, the library swapped out at midnight. No fixed
+    schedule — just what was specific enough to write down.
+  </p>
+</section>
+
+<hr class="hairline" />
+
+<section class="index container">
+  <article class="entry" *ngFor="let post of posts">
+    <a class="entry__link" [routerLink]="['/blog', post.slug]">
+      <span class="entry__number">{{ indexOf(post) }}</span>
+      <div class="entry__body">
+        <div class="entry__meta eyebrow">
+          <time [attr.datetime]="post.date">{{ post.date }}</time>
+          <span>·</span>
+          <span>{{ post.readTime }} read</span>
+        </div>
+        <h2 class="entry__title">{{ post.title }}</h2>
+        <p class="entry__excerpt">{{ post.excerpt }}</p>
+        <div class="entry__tags">
+          <span class="entry__tag" *ngFor="let tag of post.tags">#{{ tag }}</span>
+        </div>
+      </div>
+    </a>
+    <hr class="hairline" />
+  </article>
+</section>

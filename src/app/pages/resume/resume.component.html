@@ -1,0 +1,65 @@
+<section class="resume container">
+  <header class="resume__header">
+    <div>
+      <!-- <span class="eyebrow">Curriculum vitae</span> -->
+      <h1 class="resume__name">{{ name }}</h1>
+      <p class="resume__title">{{ title }}</p>
+    </div>
+    <button class="btn btn--accent no-print" type="button" (click)="print()">Print / Save PDF</button>
+  </header>
+
+  <div class="resume__contact eyebrow">
+    <span>{{ location }}</span>
+    <span>·</span>
+    <span>{{ email }}</span>
+    <span *ngFor="let link of links">· <a [href]="link.href">{{ link.label }}</a></span>
+  </div>
+
+  <hr class="hairline" />
+
+  <section class="resume__block">
+    <h2 class="resume__block-title">Summary</h2>
+    <p class="resume__summary">{{ summary }}</p>
+  </section>
+
+  <hr class="hairline" />
+
+  <section class="resume__block">
+    <h2 class="resume__block-title">Experience</h2>
+    <article class="resume__item" *ngFor="let job of experience">
+      <div class="resume__item-head">
+        <h3>{{ job.role }} <span class="resume__org">— {{ job.org }}</span></h3>
+        <span class="resume__period eyebrow">{{ job.period }}</span>
+      </div>
+      <ul>
+        <li *ngFor="let point of job.points">{{ point }}</li>
+      </ul>
+    </article>
+  </section>
+
+  <hr class="hairline" />
+
+  <section class="resume__block">
+    <h2 class="resume__block-title">Education</h2>
+    <article class="resume__item" *ngFor="let ed of education">
+      <div class="resume__item-head">
+        <h3>{{ ed.degree }} <span class="resume__org">— {{ ed.school }}</span></h3>
+        <span class="resume__period eyebrow">{{ ed.period }}</span>
+      </div>
+    </article>
+  </section>
+
+  <hr class="hairline" />
+
+  <section class="resume__block">
+    <h2 class="resume__block-title">Skills</h2>
+    <div class="resume__skills">
+      <div class="resume__skill-group" *ngFor="let group of skills">
+        <span class="resume__skill-label eyebrow">{{ group.label }}</span>
+        <div class="resume__skill-tags">
+          <span class="resume__tag" *ngFor="let item of group.items">{{ item }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

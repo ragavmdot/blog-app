@@ -1,0 +1,22 @@
+<header class="nav">
+  <div class="nav__bar container">
+    <a routerLink="/" class="nav__mark" (click)="closeMenu()">
+      <span class="nav__mark-glyph">§</span>
+      <span class="nav__mark-text">Fieldnotes</span>
+    </a>
+
+    <button class="nav__toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="nav-links" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav__links" id="nav-links" [class.nav__links--open]="menuOpen()">
+      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
+        <span class="tag">01</span> Journal
+      </a>
+      <a routerLink="/resume" routerLinkActive="is-active" (click)="closeMenu()">
+        <span class="tag">02</span> Resume
+      </a>
+    </nav>
+  </div>
+  <hr class="hairline" />
+</header>

@@ -1,0 +1,34 @@
+<ng-container *ngIf="post; else missing">
+  <article class="post container">
+    <a class="post__back" routerLink="/">&larr; Back to journal</a>
+
+    <div class="post__meta eyebrow">
+      <span>Entry No. {{ indexNumber }}</span>
+      <span>·</span>
+      <time [attr.datetime]="post.date">{{ post.date }}</time>
+      <span>·</span>
+      <span>{{ post.readTime }} read</span>
+    </div>
+
+    <h1 class="post__title">{{ post.title }}</h1>
+    <p class="post__byline">Logged by {{ post.author }}</p>
+
+    <hr class="hairline" />
+
+    <div class="post__content">
+      <p *ngFor="let paragraph of post.content">{{ paragraph }}</p>
+    </div>
+
+    <div class="post__tags">
+      <span class="post__tag" *ngFor="let tag of post.tags">#{{ tag }}</span>
+    </div>
+  </article>
+</ng-container>
+
+<ng-template #missing>
+  <div class="container post-missing">
+    <span class="eyebrow">Entry not found</span>
+    <h1>This page fell out of the notebook.</h1>
+    <a class="btn btn--accent" routerLink="/">Back to journal</a>
+  </div>
+</ng-template>
