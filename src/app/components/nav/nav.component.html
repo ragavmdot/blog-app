@@ -10,11 +10,14 @@
     </button>
 
     <nav class="nav__links" id="nav-links" [class.nav__links--open]="menuOpen()">
+      <a routerLink="/about" routerLinkActive="is-active" (click)="closeMenu()">
+        <span class="tag">01</span> About me
+      </a>
       <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
-        <span class="tag">01</span> Journal
+        <span class="tag">02</span> Journal
       </a>
       <a routerLink="/resume" routerLinkActive="is-active" (click)="closeMenu()">
-        <span class="tag">02</span> Resume
+        <span class="tag">03</span> Resume
       </a>
     </nav>
   </div>
