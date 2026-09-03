@@ -6,9 +6,9 @@ import { ResumeComponent } from './pages/resume/resume.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
-  { path: 'about', component: AboutComponent, title: 'Fieldnotes — About' },
-  { path: '', component: HomeComponent, title: 'Fieldnotes — Journal' },
-  { path: 'blog/:slug', component: BlogPostComponent, title: 'Fieldnotes — Entry' },
-  { path: 'resume', component: ResumeComponent, title: 'Fieldnotes — Resume' },
-  { path: '**', component: NotFoundComponent, title: 'Fieldnotes — Not found' }
+  { path: 'about', component: AboutComponent, title: 'devLogs — About' },
+  { path: '', component: HomeComponent, title: 'devLogs — Journal' },
+  { path: 'blog/:slug', component: BlogPostComponent, title: 'devLogs — Entry' },
+  { path: 'resume', component: ResumeComponent, title: 'devLogs — Resume' },
+  { path: '**', component: NotFoundComponent, title: 'devLogs — Not found' }
 ];

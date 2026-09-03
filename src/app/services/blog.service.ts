@@ -141,7 +141,7 @@ export class BlogService {
     {
       id: 1,
       slug: 'first-entry',
-      title: 'Starting a fieldnotes journal',
+      title: 'Starting a devLogs journal',
       excerpt:
         'Why a personal log of small, specific technical decisions is worth more than another portfolio homepage.',
       author: 'Ragav Mohankumar',
