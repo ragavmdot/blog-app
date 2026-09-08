@@ -11,7 +11,7 @@ export class BlogService {
       excerpt:
         'A minimal API endpoint is three lines until it needs a filter, a versioning scheme, and a test double. Notes on where the "simpler" model starts billing you back.',
       author: 'Ragav Mohankumar',
-      date: '2026-09-03',
+      date: '2026-08-27',
       readTime: '6 min',
       tags: ['dotnet', 'architecture'],
       content: [
@@ -28,7 +28,7 @@ export class BlogService {
       excerpt:
         'The attribute is the easy ten percent. Notes on refresh token rotation, rate limiting, and secrets management from an API that actually got attacked.',
       author: 'Ragav Mohankumar',
-      date: '2026-08-19',
+      date: '2026-06-11',
       readTime: '7 min',
       tags: ['dotnet', 'security'],
       content: [
@@ -45,7 +45,7 @@ export class BlogService {
       excerpt:
         'A single-file app is fast to start and slow to change. Notes on splitting an Angular app along the seams that actually matter.',
       author: 'Ragav Mohankumar',
-      date: '2026-08-02',
+      date: '2026-04-23',
       readTime: '6 min',
       tags: ['angular', 'architecture'],
       content: [
@@ -62,7 +62,7 @@ export class BlogService {
       excerpt:
         'Logs tell you what happened in one place. A trace tells you what happened to one request. Wiring the second one up in a .NET stack that spans a frontend and background workers.',
       author: 'Ragav Mohankumar',
-      date: '2026-08-01',
+      date: '2026-02-07',
       readTime: '6 min',
       tags: ['dotnet', 'observability'],
       content: [
@@ -79,7 +79,7 @@ export class BlogService {
       excerpt:
         'Three papers and a manual that changed how I think about state, and the specific sentence in each that did it.',
       author: 'Ragav Mohankumar',
-      date: '2026-07-18',
+      date: '2025-12-19',
       readTime: '4 min',
       tags: ['reading', 'notes'],
       content: [
@@ -95,7 +95,7 @@ export class BlogService {
       excerpt:
         'MediatR makes it easy to add a handler for everything, including the things that never needed one. Where the split actually pays for itself.',
       author: 'Ragav Mohankumar',
-      date: '2026-07-14',
+      date: '2025-10-31',
       readTime: '5 min',
       tags: ['dotnet', 'architecture'],
       content: [
@@ -112,7 +112,7 @@ export class BlogService {
       excerpt:
         'The debugger finds where the program is. It does not tell you what the program means. That part is still on you.',
       author: 'Ragav Mohankumar',
-      date: '2026-06-29',
+      date: '2025-08-14',
       readTime: '5 min',
       tags: ['debugging', 'craft'],
       content: [
@@ -128,7 +128,7 @@ export class BlogService {
       excerpt:
         'The scheduler is the easy part. The hard part is what happens when the same job fires twice across two instances of the same service.',
       author: 'Ragav Mohankumar',
-      date: '2026-06-25',
+      date: '2025-06-02',
       readTime: '6 min',
       tags: ['dotnet', 'infrastructure'],
       content: [
@@ -145,7 +145,7 @@ export class BlogService {
       excerpt:
         'Why a personal log of small, specific technical decisions is worth more than another portfolio homepage.',
       author: 'Ragav Mohankumar',
-      date: '2026-06-01',
+      date: '2025-03-21',
       readTime: '3 min',
       tags: ['meta'],
       content: [

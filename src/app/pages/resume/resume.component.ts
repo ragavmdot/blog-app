@@ -77,6 +77,24 @@ export class ResumeComponent {
         'Shipped marketing sites and small web apps for a rotating slate of clients.',
         'Wrote the team\'s first component-testing guide, still in use.'
       ]
+    },
+    {
+      role: 'Web Application Developer',
+      org: 'iView Solutions',
+      period: '2014 — 2016',
+      points: [
+        'Shipped marketing sites and small web apps for a rotating slate of clients.',
+        'Wrote the team\'s first component-testing guide, still in use.'
+      ]
+    },
+    {
+      role: 'ECommerce Analyst',
+      org: 'Monuj Ltd',
+      period: '2012 — 2014',
+      points: [
+        'Shipped marketing sites and small web apps for a rotating slate of clients.',
+        'Wrote the team\'s first component-testing guide, still in use.'
+      ]
     }
   ];
 
