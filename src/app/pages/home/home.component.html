@@ -11,10 +11,10 @@
 <hr class="hairline" />
 
 <section class="index container">
-  <article class="entry" *ngFor="let post of posts">
-    <a class="entry__link" [routerLink]="['/blog', post.slug]">
-      <span class="entry__number">{{ indexOf(post) }}</span>
-      <div class="entry__body">
+  <div class="index__grid">
+    <article class="entry" *ngFor="let post of posts">
+      <a class="entry__link" [routerLink]="['/blog', post.slug]">
+        <span class="entry__number">{{ indexOf(post) }}</span>
         <div class="entry__meta eyebrow">
           <time [attr.datetime]="post.date">{{ post.date }}</time>
           <span>·</span>
@@ -25,8 +25,7 @@
         <div class="entry__tags">
           <span class="entry__tag" *ngFor="let tag of post.tags">#{{ tag }}</span>
         </div>
-      </div>
-    </a>
-    <hr class="hairline" />
-  </article>
+      </a>
+    </article>
+  </div>
 </section>
