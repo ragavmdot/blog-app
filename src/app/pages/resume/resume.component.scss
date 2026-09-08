@@ -87,6 +87,11 @@
     color: var(--ink-soft);
   }
 
+  &__location {
+    display: block;
+    margin-top: 0.3rem;
+  }
+
   &__period {
     white-space: nowrap;
   }

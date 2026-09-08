@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 interface ExperienceItem {
   role: string;
+  location: string;
   org: string;
   period: string;
   points: string[];
@@ -42,7 +43,8 @@ export class ResumeComponent {
 
   experience: ExperienceItem[] = [
     {
-      role: 'Senior Software Developer (.NET Full Stack)',
+      role: 'Senior Software Developer',
+      location: 'Dallas, TX',
       org: 'Santander Consumer USA | Ascendion',
       period: '2025 — Present',
       points: [
@@ -53,6 +55,7 @@ export class ResumeComponent {
     },
     {
       role: 'Lead Applications Developer',
+      location: 'Addison, TX',
       org: 'Wells Fargo Bank',
       period: '2023 — 2025',
       points: [
@@ -62,6 +65,7 @@ export class ResumeComponent {
     },
     {
       role: 'Senior .NET Developer',
+      location: 'Houston, TX | Remote | Kitchener, ON, Canada',
       org: 'PrimeroEdge (aka School Cafe)',
       period: '2019 — 2023',
       points: [
@@ -71,6 +75,7 @@ export class ResumeComponent {
     },
     {
       role: 'Senior Consultant',
+      location: 'Dallas, TX',
       org: 'Army and Air Force Exchange Service | Capgemini',
       period: '2016 — 2019',
       points: [
@@ -80,6 +85,7 @@ export class ResumeComponent {
     },
     {
       role: 'Web Application Developer',
+      location: 'Chennai, TN, India',
       org: 'iView Solutions',
       period: '2014 — 2016',
       points: [
@@ -89,6 +95,7 @@ export class ResumeComponent {
     },
     {
       role: 'ECommerce Analyst',
+      location: 'Manchester, UK',
       org: 'Monuj Ltd',
       period: '2012 — 2014',
       points: [
