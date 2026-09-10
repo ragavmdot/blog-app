@@ -16,7 +16,17 @@
     <hr class="hairline" />
 
     <div class="post__content">
-      <p *ngFor="let paragraph of post.content">{{ paragraph }}</p>
+      <ng-container *ngFor="let block of post.content">
+        <div
+          *ngIf="!isImageBlock(block)"
+          class="post__markdown"
+          [innerHTML]="renderMarkdown(block)"
+        ></div>
+        <figure *ngIf="isImageBlock(block)" class="post__image">
+          <img [src]="block.src" [alt]="block.alt" />
+          <figcaption *ngIf="block.caption">{{ block.caption }}</figcaption>
+        </figure>
+      </ng-container>
     </div>
 
     <div class="post__tags">

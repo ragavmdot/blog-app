@@ -56,23 +56,6 @@ export class BlogService {
       ]
     },
     {
-      id: 6,
-      slug: 'distributed-tracing-opentelemetry',
-      title: 'Distributed tracing across API, workers, and frontend with OpenTelemetry',
-      excerpt:
-        'Logs tell you what happened in one place. A trace tells you what happened to one request. Wiring the second one up in a .NET stack that spans a frontend and background workers.',
-      author: 'Ragav Mohankumar',
-      date: '2026-02-07',
-      readTime: '6 min',
-      tags: ['dotnet', 'observability'],
-      content: [
-        'A log line answers "what happened here." A trace answers "what happened to this specific request, across every service it touched." The difference only matters once a request crosses a process boundary — which in practice is almost immediately, the moment an API call enqueues a background job.',
-        'OpenTelemetry earns its adoption cost by being the one thing that is not vendor-specific: the SDK is the same whether traces end up in Application Insights, Grafana Tempo, or Jaeger, so the instrumentation survives a backend migration that the old vendor SDK never would have.',
-        'The part that takes actual work is context propagation past HTTP — a trace ID travels for free across an outgoing `HttpClient` call because the SDK patches it, but it has to be threaded through manually into a Hangfire job payload or a message queue header, or the trace just ends at the API boundary and the background half of the request becomes invisible again.',
-        'The payoff shows up the first time a slow request gets root-caused in one screen instead of three log searches across three services. The failure mode to watch for is the opposite problem: instrumenting every method until the traces are as noisy as the logs were. Trace the boundaries — HTTP in, queue out, database call — and let the code in between stay untraced.'
-      ]
-    },
-    {
       id: 5,
       slug: 'reading-list-margins',
       title: 'What I underline: a reading list with margin notes',
@@ -122,23 +105,6 @@ export class BlogService {
       ]
     },
     {
-      id: 2,
-      slug: 'background-jobs-at-scale',
-      title: 'Background jobs at scale: Hangfire, Quartz.NET, and the idempotency problem',
-      excerpt:
-        'The scheduler is the easy part. The hard part is what happens when the same job fires twice across two instances of the same service.',
-      author: 'Ragav Mohankumar',
-      date: '2025-06-02',
-      readTime: '6 min',
-      tags: ['dotnet', 'infrastructure'],
-      content: [
-        'Hangfire, Quartz.NET, and Azure Functions timer triggers all solve the same first problem — run this on a schedule or after a delay — and none of them solve the second problem for you: what happens when two instances of the same service both think they own the job.',
-        'Hangfire\'s SQL-backed storage gives you distributed locking almost for free, which is why it tends to win for teams already running SQL Server and wanting the least new infrastructure. Quartz.NET\'s clustering does the same job with more configuration and less opinion, which is the right trade when the shop is already invested in its provider model. Azure Functions sidesteps the question by making the platform own the scaling decision, at the cost of losing visibility into exactly when and where a job ran.',
-        'None of that matters if the job itself is not idempotent, and this is where most retry storms actually start: a job times out after doing half its work, the scheduler retries it, and now a charge gets applied twice or an email goes out twice. The fix is not a better scheduler, it is a job that can safely run twice — an idempotency key checked before the side effect, not a shorter timeout.',
-        'The debugging cost shows up in observability, not in the job itself. A failed job needs to say which instance ran it, which attempt number this was, and what the previous attempt did — without that, a retry storm looks identical to three unrelated failures, and nobody trusts the dashboard enough to stop paging on it.'
-      ]
-    },
-    {
       id: 1,
       slug: 'first-entry',
       title: 'Starting a devLogs journal',
@@ -149,9 +115,15 @@ export class BlogService {
       readTime: '3 min',
       tags: ['meta'],
       content: [
-        'Portfolio sites tend to describe outcomes: shipped this, led that. They rarely show the small decision in the middle that made the outcome possible.',
-        'This journal is an attempt to keep those decisions somewhere — the naming choice, the library swapped out, the bug that turned out to be a reading problem rather than a code problem.',
-        'No fixed schedule. An entry goes up when there is something specific enough to be worth writing down.'
+        'Hello World: Why I\'m Starting This Developer Blog',
+        'Welcome to my new digital home!',
+        'If you are reading this, the DNS propagated, the CSS loaded, and I finally hit the "Publish" button on my very first blog post.',
+        'Like many software developers, I spend most of my day talking to computers, debugging cryptic error messages, and trying to make complex systems behave. I plan to keep things practical, honest, and grounded in real-world experience. You will see:',
+        '1. Short tutorials on tools, languages, and workflows I use daily.',
+        '2. **"Today I Learned" (TIL)** posts breaking down small, cool discoveries.',
+        '3. Career reflections and my honest thoughts on navigating the tech industry.',
+        '4. Tooling and productivity hacks that help me streamline my daily development workflow.',
+        '5. Resource reviews highlighting the materials that truly made me a better engineer.',
       ]
     }
   ];

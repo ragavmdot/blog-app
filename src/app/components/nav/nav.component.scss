@@ -14,16 +14,17 @@
 
 .nav__mark {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5rem;
   text-decoration: none;
   color: var(--ink);
 }
 
-.nav__mark-glyph {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--accent);
+.nav__mark-logo {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
 }
 
 .nav__mark-text {

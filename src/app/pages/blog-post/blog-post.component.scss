@@ -37,8 +37,28 @@
     font-size: 1.1rem;
     margin-top: 2rem;
 
-    p {
+    .post__markdown ::ng-deep p,
+    .post__markdown ::ng-deep ul,
+    .post__markdown ::ng-deep ol,
+    .post__markdown ::ng-deep pre,
+    .post__markdown ::ng-deep blockquote {
       margin-bottom: 1.4em;
+    }
+  }
+
+  &__image {
+    margin: 2rem 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      color: var(--ink-soft);
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
     }
   }
 
