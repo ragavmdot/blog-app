@@ -48,7 +48,7 @@ export class ResumeComponent {
       org: 'Santander Consumer USA | Ascendion',
       period: '2025 — Present',
       points: [
-        'Led migration of a 40-component legacy Angular app to standalone components, cutting initial bundle size by 31%.',
+        'Led migration of a 40-component legacy Angular app to standalone components, cutting initial bundle size by 30%.',
         'Introduced a shared component library adopted across four product teams.',
         'Mentored two junior engineers through their first production routing and state-management work.'
       ]
@@ -59,8 +59,16 @@ export class ResumeComponent {
       org: 'Wells Fargo Bank',
       period: '2023 — 2025',
       points: [
-        'Built the customer-facing analytics dashboard from a single-page prototype into a routed, component-based app.',
-        'Owned the design system\'s typography and spacing tokens across five product surfaces.'
+        'Designed and developed UI applications using Angular 12/15/16, Kendo UI, TypeScript, and RxJS.',
+        'Built backend REST API microservices using C#, .NET Core, SQL Server, and MongoDB.',
+        'Developed RESTful web services using Node JS (Express) to write audit logs to MongoDB.',
+        'Engineered reusable Components, Modules, Directives, Services (as Dependency Injections), and Pipes using Angular and Kendo UI to improve code quality and maintainability.',
+        'Architected a new Angular SPA for Business and Individual Tax/ITIN validation, featuring Single Sign-On via OAuth 2.0 and Ping.',
+        'Built REST APIs using .NET Core to fetch data from Hogan Services and write to Kafka topics.',
+        'Developed custom NuGet packages for salt-based data encryption using HashiCorp Key Vault.',
+        'Integrated SonarQube, Trufflehog, and Checkmarx into the Jenkins pipeline, and TSLint into Angular projects, to strengthen code quality and security',
+        'Automated UI and API testing using the Selenium framework.',
+        'Wrote unit tests using Karma (Angular) and NUnit (.NET Core).'
       ]
     },
     {
@@ -69,8 +77,16 @@ export class ResumeComponent {
       org: 'PrimeroEdge (aka School Cafe)',
       period: '2019 — 2023',
       points: [
-        'Shipped marketing sites and small web apps for a rotating slate of clients.',
-        'Wrote the team\'s first component-testing guide, still in use.'
+        'Designed and developed robust backend REST APIs in a microservices architecture using C#, .NET Core, SQL Server, MongoDB, Couchbase, and LINQ.',
+        'Built Angular custom directives, components, and modules encapsulating business logic and rules.',
+        'Implemented Angular services for state management across components using RxJS Observables.',
+        'Developed a reusable input component library using Angular Material.',
+        'Delivered 13+ production Paginated Reports using Microsoft Power BI.',
+        'Configured cron jobs with serverless Azure Functions to sync master and micro databases.',
+        'Architected and developed custom NuGet packages using Azure Service Bus for Service Logs, Caching, Data Processing, App Utilities, SMS, and Email services.',
+        'Implemented individual APIs and API orchestrations using Azure API Management.',
+        'Integrated RabbitMQ within a .NET Web API service to trigger asynchronous events writing to Couchbase servers, decoupling large application components.',
+        'Implemented application logging with Azure Application Insights.'
       ]
     },
     {
@@ -79,6 +95,7 @@ export class ResumeComponent {
       org: 'Army and Air Force Exchange Service | Capgemini',
       period: '2016 — 2019',
       points: [
+        'Project 1: Digital Garrison',
         'Shipped marketing sites and small web apps for a rotating slate of clients.',
         'Wrote the team\'s first component-testing guide, still in use.'
       ]
