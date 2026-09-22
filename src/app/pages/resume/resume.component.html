@@ -32,9 +32,12 @@
         <span class="resume__period eyebrow">{{ job.period }}</span>
       </div>
       <span class="resume__location eyebrow">{{ job.location }}</span>
-      <ul>
-        <li *ngFor="let point of job.points">{{ point }}</li>
-      </ul>
+      <div class="resume__project" *ngFor="let proj of job.projects">
+        <p class="resume__project-name" *ngIf="proj.name">{{ proj.name }}</p>
+        <ul>
+          <li *ngFor="let point of proj.points">{{ point }}</li>
+        </ul>
+      </div>
     </article>
   </section>
 

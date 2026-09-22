@@ -96,6 +96,21 @@
     white-space: nowrap;
   }
 
+  &__project {
+    margin-top: 0.6rem;
+
+    &:first-of-type {
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__project-name {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin: 0;
+  }
+
   &__skills {
     display: grid;
     gap: 1.25rem;
